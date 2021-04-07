@@ -4,10 +4,13 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+
 }
+
 nav{
   background-color: #0fb9b1;
   height: 50px;
+  margin: 0px;
 }
 .title{
   padding-left: 18px;
