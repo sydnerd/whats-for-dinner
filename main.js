@@ -7,3 +7,17 @@
 //create random generator function
 //random generated meal comes on the cookpot box,
 //put hidden class on the pot
+var sides =[
+  "Caeser Salad",
+  "Crispy Potatoes",
+  "Brussel Sprouts",
+  "Mashed Potatoes",
+  "Garden Salad",
+  "French Fries",
+  "Tate Tots",
+  "Cole Slaw",
+];
+
+var mains =[
+
+]
