@@ -33,6 +33,7 @@ body {
   margin: auto;
   margin-right: 15px;
   border-radius: 5px;
+  border: none;
   margin-right: 15px;
   font-size: 11px;
   height: 25px;
@@ -98,8 +99,10 @@ svg{
   height: 25px;
   margin-left: 20px;
   margin-top: 10px;
+}
 
-
+.hidden{
+  display:none;
 }
 /* font-family: 'Roboto', sans-serif;
 
