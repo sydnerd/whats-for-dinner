@@ -9,6 +9,7 @@ body {
   background-size: cover;
   display: flex;
   flex-direction: column;
+  height: 700px;
 }
 .header-container{
   background-color: #0fb9b1;
@@ -57,26 +58,26 @@ body {
 .rightBox{
   background-color: rgba(225, 225, 225, .9);
   width: 350px;
+  height: 200px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 input{
   display: inline-block;
   position: relative;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .radio{
   font-size:10px;
-  display: grid;
-  grid-template-columns: min-content auto;
-  grid-gap: 0.5em;
+  display: block;
 }
 
 svg{
-  width: 200px;
-  height: 200px;
+  width: 85px;
+  height: 85px;
+  margin-top:
 }
 
 .letsCookButton{
