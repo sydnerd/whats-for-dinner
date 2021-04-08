@@ -6,13 +6,15 @@ body {
 
 .box-section {
   background-image: url("assets/burger-friends.jpg");
+  background-size: cover;
 }
-.header{
+.header-container{
   background-color: #0fb9b1;
   height: 50px;
   display: flex;
   justify-content: space-around;
 }
+
 .title{
   margin-top: 15px;
   font-size: 17px;
@@ -36,16 +38,24 @@ body {
 .leftBox{
   background-color: rgba(225, 225, 225, .9);
   width: 300px;
+  display: grid;
+  grid-column-gap: 50px;
 }
-
+.menuBox{
+  
+}
 .left-title{
   margin-top:0px;
   font-size: 16px;
+  padding-left: 20px;
+  padding-top: 30px;
 }
 
 .rightBox{
   background-color: rgba(225, 225, 225, .9);
   width: 300px;
+  display: grid;
+  grid-column-gap: 50px;
 }
 
 input{
@@ -70,10 +80,11 @@ svg{
   display: block;
   background-color: #0fb9b1;
   border-radius: 5px;
-  width: 145px;
+  width: 125px;
   font-size: 11px;
   height: 25px;
-  margin-left: 15px;
+  margin-left: 20px;
+  margin-top: 10px;
 
 
 }

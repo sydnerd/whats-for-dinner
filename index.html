@@ -6,20 +6,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header class="header">
+    <header class="header-container">
       <h1 class= "title">What's for Dinner?</h1>
       <button class= "add-recipe">ADD A RECIPE </button>
     </header>
     <section class = "box-section">
       <section class= "leftBox">
-        <h2 class= "left-title">What are you looking for?* </h2>
-        <label class="radio">
-          <input type="radio" name="Course" value ="Side"/>Side
-          <input type="radio" name="Course" value ="Main Dish"/>Main Dish
-          <input type="radio" name="Course" value ="Dessert"/>Dessert
-          <input type="radio" name="Course" value ="Entire Meal"/>Entire Meal
-        </label>
-        <button class= letsCookButton>LET'S COOK!</button>
+        <article class= "menuBox">
+          <h2 class= "left-title">What are you looking for?* </h2>
+          <label class="radio">
+            <input type="radio" name="Course" value ="Side"/>Side
+            <input type="radio" name="Course" value ="Main Dish"/>Main Dish
+            <input type="radio" name="Course" value ="Dessert"/>Dessert
+            <input type="radio" name="Course" value ="Entire Meal"/>Entire Meal
+          </label>
+          <button class= letsCookButton>LET'S COOK!</button>
+        </article>
       </section>
       <section class= rightBox>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125">
