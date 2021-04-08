@@ -1,6 +1,4 @@
-*{
-  border:1px solid blue;
-}
+
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -43,11 +41,10 @@ body {
 
 .leftBox{
   background-color: rgba(225, 225, 225, .9);
-  width: 250px;
   height:300px;
   margin-left: 75px;
   margin-top: 75px;
-  margin-right: 75px;
+  margin-right: 200px;
   flex:1;
 }
 
@@ -60,7 +57,6 @@ body {
 
 .rightBox{
   background-color: rgba(225, 225, 225, .9);
-  width: 250px;
   height: 300px;
   flex: 1;
   margin-right: 75px;
