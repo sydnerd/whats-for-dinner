@@ -1,4 +1,6 @@
-
+*{
+  border:1px solid blue;
+}
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -8,8 +10,9 @@ body {
   background-image: url("assets/burger-friends.jpg");
   background-size: cover;
   display: flex;
-  flex-direction: column;
-  height: 700px;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 750px;
 }
 .header-container{
   background-color: #0fb9b1;
@@ -41,13 +44,12 @@ body {
 .leftBox{
   background-color: rgba(225, 225, 225, .9);
   width: 350px;
-  margin-left: 60px;
-  margin-top: 40px;
-  display: flex;
+  height:300px;
+  margin-left: 75px;
+  margin-top: 75px;
+  flex:1;
 }
-.menuBox{
 
-}
 .left-title{
   margin-top:0px;
   font-size: 16px;
@@ -58,26 +60,26 @@ body {
 .rightBox{
   background-color: rgba(225, 225, 225, .9);
   width: 350px;
-  height: 200px;
-  display: flex;
+  height: 300px;
+  flex: 1;
+
   justify-content: center;
 }
 
 input{
-  display: inline-block;
-  position: relative;
-  font-size: 10px;
+  display: block;
+  font-size: 12px;
 }
 
 .radio{
-  font-size:10px;
+  font-size:12px;
   display: block;
 }
 
 svg{
   width: 85px;
   height: 85px;
-  margin-top:
+  margin: auto;
 }
 
 .letsCookButton{
