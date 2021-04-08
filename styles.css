@@ -1,29 +1,31 @@
-* {
-  border:1px solid blue;
-}
+
 
 body {
   font-family: 'Roboto', sans-serif;
-
 }
 
+.box-section {
+  background-image: url("assets/burger-friends.jpg");
+}
 .header{
   background-color: #0fb9b1;
   height: 50px;
-  margin: 0px;
   display: flex;
   justify-content: space-around;
 }
 .title{
-  padding-left: 18px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  margin-top: 15px;
   font-size: 17px;
-  margin: 0px;
+  margin-left: 10px;
+  margin-right:auto;
 }
 
 .add-recipe{
   background-color:rgba(225, 225, 225, .9);
+  margin-top: 15px;
+  font-size: 11px;
+  margin: auto;
+  margin-right: 15px;
   /* border-radius: 5px;
   margin-right: 15px;
   font-size: 11px;
