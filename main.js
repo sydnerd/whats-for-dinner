@@ -46,19 +46,17 @@ var desserts =[
 var sideButtonValue = document.querySelector("#sideButton");
 var letsCookButton = document.querySelector("#cookButton");
 var randomDishDisplay = document.querySelector("#dishDisplay");
-
+var image =document.querySelector("#image");
+var makeText =document.querySelector("#rightText")
 
 //need to get the value of the radio buttons to equal the array variables
-//change innerHTML
+//change innerHTML??
 
-sideButtonValue.innerHTML.value = sides[getRandomIndex(sides)]
-
-
-
+sideButtonValue.innerHTML.value = sideList;
 
 
 //list of event listners
-letsCookButton.addEventListener("click",displayMeal);
+letsCookButton.addEventListener("click",showSide);
 
 
 
@@ -66,17 +64,19 @@ letsCookButton.addEventListener("click",displayMeal);
 
 
 //list of functions
-function displayMeal(){
-  var ele= document.getElementsByName("Course");
-  for(i=0;i<ele.length;i++){
-    if(ele[i].checked)
-    randomDishDisplay.innerHTML = ele[i].value;
-  }
-}
+// //function displayMeal(){
+//   var ele= document.getElementsByName("Course");
+//   for(i=0;i<ele.length;i++){
+//     if(ele[i].checked)
+//     randomDishDisplay.innerHTML = ele[i].value;
+//   }
+// }
 function showSide(){
-  var sideList = sides[getRandomIndex(sides)];
-  if(sideButton)
+var sideList = sides[getRandomIndex(sides)];
+  if(sideButtonValue)
   randomDishDisplay.innerText =sideList;
+  image.classList.add("hidden");
+  makeText.classList.remove("hidden");
   return sideList;
 }
 function showMains(){
@@ -84,7 +84,6 @@ function showMains(){
   randomDishDisplay.innerText =mainsList;
   return mainsList;
 }
-
 function showDesserts(){
   var dessertList = mains[getRandomIndex(desserts)];
   randomDishDisplay.innerText =dessertList;

@@ -84,8 +84,8 @@ svg{
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
-  width: 85px;
-  height: 85px;
+  width: 95px;
+  height: 95px;
 }
 
 .letsCookButton{
@@ -99,13 +99,16 @@ svg{
   margin-left: 20px;
   margin-top: 10px;
 }
-
+.recipe-hidden{
+  text-align: center;
+}
 .right-text{
   font-size: 13px;
 }
 .hidden{
   display:none;
 }
+
 
 
 
