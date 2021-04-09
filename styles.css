@@ -66,10 +66,9 @@ body {
   text-align: center;
 }
 
-input{
-  display: block;
-  font-size: 12px;
-  margin-left: 10px;
+input[type="radio"]{
+display: block;
+vertical-align: top;
 }
 
 .radio-container{
@@ -101,9 +100,15 @@ svg{
   margin-top: 10px;
 }
 
+.right-text{
+  font-size: 13px;
+}
 .hidden{
   display:none;
 }
+
+
+
 /* font-family: 'Roboto', sans-serif;
 
 COLORS
