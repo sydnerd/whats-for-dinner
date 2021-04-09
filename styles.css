@@ -10,7 +10,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 750px;
+  height: 750px;;
 }
 .header-container{
   background-color: #0fb9b1;
@@ -79,7 +79,7 @@ vertical-align: top;
   cursor: pointer;
 }
 
-svg{
+.image{
   display: block;
   margin-left: auto;
   margin-right: auto;

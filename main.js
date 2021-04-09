@@ -43,26 +43,38 @@ var desserts =[
 ];
 
 //list of queryselectors
-var sideButtonValue = document.querySelector("#sideButton");
+var sideRadio = document.querySelector("#side");
+var mainRadio = document.querySelector("#mainDish");
+var dessertRadio = document.querySelector("#dessert");
+var entireMeal = document.querySelector("#entireMeal")
+
 var letsCookButton = document.querySelector("#cookButton");
 var randomDishDisplay = document.querySelector("#dishDisplay");
-var image =document.querySelector("#image");
-var makeText =document.querySelector("#rightText")
+
+var image =document.querySelector("#cookpotImg");
+var rightText =document.querySelector("#rightText");
 
 //need to get the value of the radio buttons to equal the array variables
 //change innerHTML??
 
-sideButtonValue.innerHTML.value = sideList;
 
 
 //list of event listners
-letsCookButton.addEventListener("click",showSide);
+letsCookButton.addEventListener("click",displayMeal);
 
 
 
-
-
-
+// function displayMeal(){
+//   var recipe = sides[getRandomIndex(recipe)]
+//   if(sideRadio.checked){
+//     recipe = sides[getRandomIndex(sides)]
+//     randomDishDisplay.innerText =recipe;
+//   }
+// }
+// function showRecipe(){
+//   randomDishDisplay.innerText =
+//     `<h2>${recipe}</h2>`
+//   }
 //list of functions
 // //function displayMeal(){
 //   var ele= document.getElementsByName("Course");
@@ -71,32 +83,31 @@ letsCookButton.addEventListener("click",showSide);
 //     randomDishDisplay.innerHTML = ele[i].value;
 //   }
 // }
-function showSide(){
+function displayMeal(){
 var sideList = sides[getRandomIndex(sides)];
-  if(sideButtonValue)
+var mainsList = mains[getRandomIndex(mains)];
+var dessertList = desserts[getRandomIndex(desserts)];
+  if(sideRadio.checked){
   randomDishDisplay.innerText =sideList;
   image.classList.add("hidden");
-  makeText.classList.remove("hidden");
   return sideList;
-}
-function showMains(){
-  var mainsList = mains[getRandomIndex(mains)];
+  }else if(mainRadio.checked){
   randomDishDisplay.innerText =mainsList;
-  return mainsList;
-}
-function showDesserts(){
-  var dessertList = mains[getRandomIndex(desserts)];
+  image.classList.add("hidden");
+  }else {
   randomDishDisplay.innerText =dessertList;
-  return dessertList;
+  image.classList.add("hidden");
+  }
 }
-
 //List of function for random dishes
 var sideList = sides[getRandomIndex(sides)];
 console.log(sideList)
+var mainsList = mains[getRandomIndex(mains)];
+var dessertList = mains[getRandomIndex(desserts)];
 
-
-
-
+function getRandomElement(array){
+  return array[getRandomIndex(array)];
+}
 function getRandomIndex(array){
   return Math.floor(Math.random()*array.length);
 }
