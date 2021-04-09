@@ -7,6 +7,8 @@ var sides =[
   "French Fries",
   "Tater Tots",
   "Cole Slaw",
+  "Frickin' Pickles",
+  "Buffalo Cauliflower Wings"
 ];
 
 var mains =[
@@ -33,4 +35,5 @@ var desserts =[
   "Black Forest Cake",
   "Chocolate Fudge",
   "Strawberry Shortcake",
+  "Ice Cream",
 ];

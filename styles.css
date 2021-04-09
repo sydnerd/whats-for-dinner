@@ -1,4 +1,4 @@
-
+/* *{border: 2px solid blue} */
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -11,6 +11,7 @@ body {
   display: flex;
   justify-content: space-around;
 }
+
 .header-container{
   background-color: #0fb9b1;
   height: 50px;
@@ -35,56 +36,27 @@ body {
   border: none;
   margin-right: 15px;
   font-size: 11px;
-  height: 25px;
-  width: 95px;
 }
-
-.leftBox{
+.boxes{
   background-color: rgba(225, 225, 225, .9);
   height:300px;
-  margin-left: 75px;
+  width: 300px;
   margin-top: 75px;
-  margin-right: 200px;
-  position: relative;
 }
 
 .left-title{
-  margin-top:0px;
-  font-size: 16px;
+  font-weight: bold !important;
   padding-left: 20px;
   padding-top: 30px;
 }
 
-.rightBox{
-  background-color: rgba(225, 225, 225, .9);
-  height: 300px;
-  margin-right: 75px;
-  margin-top: 75px;
-  display: block;
-  text-align: center;
-}
-
-input[type="radio"]{
-/* display: block;
-vertical-align: top; */
-width: auto;
-}
-
-/* ul>input{
-  display: inline-block;
-  margin-bottom: 3%;
-}
-
-ul>label{
-  display: block;
-  width: 140px;
-} */
 .radio-container{
   font-size:12px;
   display: block;
   position: relative;
-  padding-left:10px;
+  padding-left:15px;
   cursor: pointer;
+  line-height: 30px;
 }
 
 .image{
@@ -95,9 +67,7 @@ ul>label{
   width: 95px;
   height: 95px;
 }
-/* label{
-  display: block;
-} */
+
 .letsCookButton{
   display: block;
   background-color: #0fb9b1;
@@ -110,8 +80,18 @@ ul>label{
   margin-top: 10px;
   outline: 0;
 }
-.recipe-hidden{
-  text-align: center;
+span{
+  color:#ee5253;
+}
+.recipe{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+}
+.dish-display{
+  margin: -10px;
 }
 .right-text{
   font-size: 13px;
