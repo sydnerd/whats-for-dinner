@@ -2,15 +2,14 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-image: url("assets/burger-friends.jpg");
+  background-size: cover;
+  margin: 0;
 }
 
 .box-container {
-  background-image: url("assets/burger-friends.jpg");
-  background-size: cover;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
-  height: 750px;
 }
 .header-container{
   background-color: #0fb9b1;
@@ -46,7 +45,7 @@ body {
   margin-left: 75px;
   margin-top: 75px;
   margin-right: 200px;
-  flex:1;
+  position: relative;
 }
 
 .left-title{
@@ -59,7 +58,6 @@ body {
 .rightBox{
   background-color: rgba(225, 225, 225, .9);
   height: 300px;
-  flex: 1;
   margin-right: 75px;
   margin-top: 75px;
   display: block;
@@ -67,11 +65,20 @@ body {
 }
 
 input[type="radio"]{
-display: block;
-vertical-align: top;
+/* display: block;
+vertical-align: top; */
 width: auto;
 }
 
+/* ul>input{
+  display: inline-block;
+  margin-bottom: 3%;
+}
+
+ul>label{
+  display: block;
+  width: 140px;
+} */
 .radio-container{
   font-size:12px;
   display: block;
@@ -88,9 +95,9 @@ width: auto;
   width: 95px;
   height: 95px;
 }
-label{
+/* label{
   display: block;
-}
+} */
 .letsCookButton{
   display: block;
   background-color: #0fb9b1;
@@ -101,6 +108,7 @@ label{
   height: 25px;
   margin-left: 20px;
   margin-top: 10px;
+  outline: 0;
 }
 .recipe-hidden{
   text-align: center;

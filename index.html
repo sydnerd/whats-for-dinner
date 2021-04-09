@@ -13,26 +13,27 @@
     <section class = "box-container">
       <section class= "leftBox">
         <h2 class= "left-title">What are you looking for?<span>*</span></h2>
-        <div class="radio-container">
+        <ul class= "radio-container">
           <input type="radio"id="side" name="Course" value ="Side" checked/>
-          <label for="value">Side</label>
+          <label for="value">Side</label><br>
           <input type="radio" id="mainDish"name="Course" value ="Main Dish"/>
-          <label for="value">Main Dish</label>
+          <label for="value">Main Dish</label><br>
           <input type="radio" id="dessert" name="Course" value ="Dessert"/>
-          <label for="value">Dessert</label>
+          <label for="value">Dessert</label><br>
           <input type="radio" id="entireMeal" name="Course" value ="Entire Meal"/>
-          <label for="value">Entire Meal</label>
-        </div>
+          <label for="value">Entire Meal</label><br>
+        </ul>
         <button class= "letsCookButton" id="cookButton">LET'S COOK!</button>
       </section>
       <section class= "rightBox">
         <img class="image" id="cookpotImg" src="./assets/cookpot.svg">
         <section class= "recipe">
-          <h2 class="right-text" id="rightText"hidden><i>You should make:</i></h2>
+          <h2 class="right-text hidden" id="rightText"><i>You should make:</i></h2>
           <h2 class= "dish-display" id="dishDisplay"></h2>
         </section>
       </section>
     </section>
   </body>
+  <script type= "text/javascript" src="data.js"></script>
   <script type="text/javascript" src="main.js"></script>
 </html>

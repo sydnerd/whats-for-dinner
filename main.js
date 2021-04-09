@@ -5,42 +5,6 @@
 //create random generator function
 //random generated meal comes on the cookpot box,
 //put hidden class on the pot
-var sides =[
-  "Caeser Salad",
-  "Crispy Potatoes",
-  "Brussel Sprouts",
-  "Mashed Potatoes",
-  "Garden Salad",
-  "French Fries",
-  "Tater Tots",
-  "Cole Slaw",
-];
-
-var mains =[
-  "Chicken Parmesean",
-  "Spaghetti and Meatballs",
-  "Chicken Tenders",
-  "Cheese Burger",
-  "Pulled Pork Sandwich",
-  "Cheese Pizza",
-  "Chicken Fried Rice",
-  "Grilled Chicken",
-  "Steak Fajitas",
-  "Fillet Mignon",
-];
-
-var desserts =[
-  "Apple Pie",
-  "Cheesecake",
-  "Brownie",
-  "Funfetti Cupcake",
-  "Pumpkin Pie",
-  "Vanilla Icecream",
-  "Key Lime Pie",
-  "Black Forest Cake",
-  "Chocolate Fudge",
-  "Strawberry Shortcake",
-];
 
 //list of queryselectors
 var sideRadio = document.querySelector("#side");
@@ -82,16 +46,15 @@ letsCookButton.addEventListener("click",displayMeal);
 function displayMeal(){
 var sideList = sides[getRandomIndex(sides)];
 var mainsList = mains[getRandomIndex(mains)];
+rightText.classList.remove("hidden");
+image.classList.add("hidden");
 var dessertList = desserts[getRandomIndex(desserts)];
   if(sideRadio.checked){
   randomDishDisplay.innerText =`${sideList}!`;
-  image.classList.add("hidden");
   }else if(mainRadio.checked){
   randomDishDisplay.innerText =`${mainsList}!`;
-  image.classList.add("hidden");
   }else {
   randomDishDisplay.innerText =`${dessertList}!`;
-  image.classList.add("hidden");
   }
 }
 //List of function for random dishes
