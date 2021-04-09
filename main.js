@@ -41,32 +41,55 @@ var desserts =[
   "Chocolate Fudge",
   "Strawberry Shortcake",
 ];
+
 //list of queryselectors
-var sideButton = document.querySelector("#sideButton");
+var sideButtonValue = document.querySelector("#sideButton");
 var letsCookButton = document.querySelector("#cookButton");
-var randomDishDisplay = document.querySelector("#dishDisplay")
+var randomDishDisplay = document.querySelector("#dishDisplay");
 
 
+//need to get the value of the radio buttons to equal the array variables
+//change innerHTML
 
+sideButtonValue.innerHTML.value = sides[getRandomIndex(sides)]
 
 
 
 
 
 //list of event listners
-letsCookButton.addEventListener("click",showDish);
+letsCookButton.addEventListener("click",displayMeal);
+
 
 
 
 
 
 //list of functions
-function showDish(){
+function displayMeal(){
+  var ele= document.getElementsByName("Course");
+  for(i=0;i<ele.length;i++){
+    if(ele[i].checked)
+    randomDishDisplay.innerHTML = ele[i].value;
+  }
+}
+function showSide(){
   var sideList = sides[getRandomIndex(sides)];
+  if(sideButton)
   randomDishDisplay.innerText =sideList;
+  return sideList;
+}
+function showMains(){
+  var mainsList = mains[getRandomIndex(mains)];
+  randomDishDisplay.innerText =mainsList;
+  return mainsList;
 }
 
-
+function showDesserts(){
+  var dessertList = mains[getRandomIndex(desserts)];
+  randomDishDisplay.innerText =dessertList;
+  return dessertList;
+}
 
 //List of function for random dishes
 var sideList = sides[getRandomIndex(sides)];
