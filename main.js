@@ -71,31 +71,26 @@ letsCookButton.addEventListener("click",displayMeal);
 //     randomDishDisplay.innerText =recipe;
 //   }
 // }
-// function showRecipe(){
+// function showRecipe(recipe){
 //   randomDishDisplay.innerText =
 //     `<h2>${recipe}</h2>`
 //   }
-//list of functions
-// //function displayMeal(){
-//   var ele= document.getElementsByName("Course");
-//   for(i=0;i<ele.length;i++){
-//     if(ele[i].checked)
-//     randomDishDisplay.innerHTML = ele[i].value;
-//   }
-// }
+//would like to refactor this to be smaller and similer, maybe can use some interpolation
+//need to figure out how to get the "You should make: text to appear
+//need to figure out how to interpolate the exclamation mark after the food
+
 function displayMeal(){
 var sideList = sides[getRandomIndex(sides)];
 var mainsList = mains[getRandomIndex(mains)];
 var dessertList = desserts[getRandomIndex(desserts)];
   if(sideRadio.checked){
-  randomDishDisplay.innerText =sideList;
+  randomDishDisplay.innerText =`${sideList}!`;
   image.classList.add("hidden");
-  return sideList;
   }else if(mainRadio.checked){
-  randomDishDisplay.innerText =mainsList;
+  randomDishDisplay.innerText =`${mainsList}!`;
   image.classList.add("hidden");
   }else {
-  randomDishDisplay.innerText =dessertList;
+  randomDishDisplay.innerText =`${dessertList}!`;
   image.classList.add("hidden");
   }
 }
@@ -105,9 +100,6 @@ console.log(sideList)
 var mainsList = mains[getRandomIndex(mains)];
 var dessertList = mains[getRandomIndex(desserts)];
 
-function getRandomElement(array){
-  return array[getRandomIndex(array)];
-}
 function getRandomIndex(array){
   return Math.floor(Math.random()*array.length);
 }

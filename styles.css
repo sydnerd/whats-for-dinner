@@ -10,7 +10,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 750px;;
+  height: 750px;
 }
 .header-container{
   background-color: #0fb9b1;
@@ -69,6 +69,7 @@ body {
 input[type="radio"]{
 display: block;
 vertical-align: top;
+width: auto;
 }
 
 .radio-container{
@@ -87,7 +88,9 @@ vertical-align: top;
   width: 95px;
   height: 95px;
 }
-
+label{
+  display: block;
+}
 .letsCookButton{
   display: block;
   background-color: #0fb9b1;
