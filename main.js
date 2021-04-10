@@ -4,20 +4,18 @@ var randomDishDisplay = document.querySelector("#dishDisplay");
 
 var image =document.querySelector("#cookpotImg");
 var rightText =document.querySelector("#rightText");
-
-
+var addARecipe =document.querySelector("#addRecipeButn");
+var footer =document.querySelector("#recipeFooter");
 
 
 letsCookButton.addEventListener("click",displayMeal);
+addARecipe.addEventListener("click", displayForm);
 
-
-
-
-  function buttonClicked(){
-  for(var i=0; i<radioButtons.length; i++)
-    if(radioButtons[i].checked){
-      return radioButtons[i].id
-    }
+function buttonClicked(){
+for(var i=0; i<radioButtons.length; i++)
+  if(radioButtons[i].checked){
+    return radioButtons[i].id
+  }
 }
 
 function sideDisplay(){
@@ -52,11 +50,16 @@ function displayMeal(){
   randomDishDisplay.innerText = `${text}!`
 }
 
-
-var sideList = sides[getRandomIndex(sides)];
-var mainsList = mains[getRandomIndex(mains)];
-var dessertList = mains[getRandomIndex(desserts)];
+function displayForm(){
+  footer.classList.remove("hidden");
+}
 
 function getRandomIndex(array){
   return Math.floor(Math.random()*array.length);
 }
+
+
+//When you click the add a recipe button, the footer appears. It is hidden before
+//When the recipe Type = side, push the string into the sides array and then use the display
+//function to display the meal and removethe cooking pot image
+//Do this for side, main dish, and dessert
