@@ -14,12 +14,7 @@ var rightText =document.querySelector("#rightText");
 //list of event listners
 letsCookButton.addEventListener("click",displayMeal);
 
-// function meal(){
-//   for(var i=0; i<radioButtons.length; i++)
-//     if(radioButton[i].checked){
-//
-//     }
-// }
+
 
 // function displayMeal(){
 //   var recipe = sides[getRandomIndex(recipe)]
@@ -54,7 +49,7 @@ letsCookButton.addEventListener("click",displayMeal);
 //   randomDishDisplay.innerText =`${dessertList}!`;
 //   }
 // }
-var buttonClicked = function(){
+  function buttonClicked(){
   for(var i=0; i<radioButtons.length; i++)
     if(radioButtons[i].checked){
       return radioButtons[i].id
