@@ -1,25 +1,13 @@
-//when the user clicks a dish option, and then clicks lets cook,
-//the user sees a randomdish from the list of possible dishes
-//use query selector to grab html that we are going to be using
-//create event listener on lets cook button
-//create random generator function
-//random generated meal comes on the cookpot box,
-//put hidden class on the pot
+
 
 //list of queryselectors
-var sideRadio = document.querySelector("#side");
-var mainRadio = document.querySelector("#mainDish");
-var dessertRadio = document.querySelector("#dessert");
-var entireMeal = document.querySelector("#entireMeal")
 
+var radioButtons = document.querySelectorAll(".radioButtons");
 var letsCookButton = document.querySelector("#cookButton");
 var randomDishDisplay = document.querySelector("#dishDisplay");
 
 var image =document.querySelector("#cookpotImg");
 var rightText =document.querySelector("#rightText");
-
-//need to get the value of the radio buttons to equal the array variables
-//change innerHTML??
 
 
 
@@ -43,23 +31,70 @@ letsCookButton.addEventListener("click",displayMeal);
 //need to figure out how to get the "You should make: text to appear
 //need to figure out how to interpolate the exclamation mark after the food
 
-function displayMeal(){
-var sideList = sides[getRandomIndex(sides)];
-var mainsList = mains[getRandomIndex(mains)];
-rightText.classList.remove("hidden");
-image.classList.add("hidden");
-var dessertList = desserts[getRandomIndex(desserts)];
-  if(sideRadio.checked){
-  randomDishDisplay.innerText =`${sideList}!`;
-  }else if(mainRadio.checked){
-  randomDishDisplay.innerText =`${mainsList}!`;
-  }else {
-  randomDishDisplay.innerText =`${dessertList}!`;
-  }
+// function displayMeal(){
+//   for(var i=0; i<radioButtons.length; i++)
+//     if(radioButtons[i].checked){
+//     console.log(radioButtons[i])
+//     }
+// var sideList = sides[getRandomIndex(sides)];
+// var mainsList = mains[getRandomIndex(mains)];
+// var dessertList = desserts[getRandomIndex(desserts)];
+// rightText.classList.remove("hidden");
+// image.classList.add("hidden");
+//   if(sideRadio.checked){
+//   randomDishDisplay.innerText =`${sideList}!`;
+//   }else if(mainRadio.checked){
+//   randomDishDisplay.innerText =`${mainsList}!`;
+//   }else {
+//   randomDishDisplay.innerText =`${dessertList}!`;
+//   }
+// }
+  function buttonClicked(){
+  for(var i=0; i<radioButtons.length; i++)
+    if(radioButtons[i].checked){
+      return radioButtons[i].id
+    }
 }
+
+function sideDisplay(){
+  var sideList = sides[getRandomIndex(sides)];
+  return sideList;
+  // randomDishDisplay.innerText =`${sideList}!`;
+}
+
+function dessertDisplay(){
+  var dessertList = desserts[getRandomIndex(desserts)];
+  return dessertList;
+  // randomDishDisplay.innerText =`${dessertList}!`;
+}
+
+function mainsDisplay(){
+  var mainsList = mains[getRandomIndex(mains)];
+  return mainsList;
+
+  // randomDishDisplay.innerText =`${mainsList}!`;
+}
+
+function displayMeal(){
+  rightText.classList.remove("hidden");
+  image.classList.add("hidden");
+  var button = buttonClicked();
+  var text ;
+ if(button == "side"){
+    text =sideDisplay();
+  }if(button == "mainDish"){
+    text =mainsDisplay();
+  }if (button == "dessert"){
+    text=dessertDisplay();
+  }if(button == "entireMeal"){
+    text = `${mainsDisplay()} with a side of ${sideDisplay()} and ${dessertDisplay()} for dessert`
+  }
+  randomDishDisplay.innerText = `${text} !`
+}
+
+
 //List of function for random dishes
 var sideList = sides[getRandomIndex(sides)];
-console.log(sideList)
 var mainsList = mains[getRandomIndex(mains)];
 var dessertList = mains[getRandomIndex(desserts)];
 
