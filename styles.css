@@ -33,13 +33,17 @@ body {
   margin-right: 15px;
   border-radius: 5px;
   border: none;
-  margin-right: 15px;
   font-size: 11px;
+  height: 25px;
+}
+
+.add-recipe:hover{
+  background-color: white;
 }
 .boxes{
   background-color: rgba(225, 225, 225, .9);
-  height:300px;
-  width: 300px;
+  height:350px;
+  width: 400px;
   margin-top: 75px;
 }
 
@@ -79,6 +83,10 @@ body {
   margin-top: 10px;
   outline: 0;
 }
+
+.letsCookButton:hover{
+  background-color: white;
+}
 span{
   color:#ee5253;
 }
@@ -89,8 +97,11 @@ span{
   align-items: center;
   margin-top: 100px;
 }
+
 .dish-display{
-  margin: -10px;
+  margin: -5px;
+  font-size: 23px;
+  margin-left: 5px;
 }
 .right-text{
   font-size: 13px;
