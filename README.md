@@ -7,11 +7,11 @@ Are you indecisive? Do you get bored with the same old meals that you cook every
 ## Navigation
 Here is an image of the page. On the left you can click one of the categories.
 
-![image](Docs/Page.png)
+![image](Docs/Page1.png)
 
 Once you click the button "Let's Cook" the image of the pot will go away and a random dish will appear on the right box.
 
-![image](Docs/ButtonClicked.png)
+![image](Docs/ButtonClicked1.png)
 
 ## Technologies
 - Javascript
