@@ -6,10 +6,14 @@ var image =document.querySelector("#cookpotImg");
 var rightText =document.querySelector("#rightText");
 var addARecipe =document.querySelector("#addRecipeButn");
 var footer =document.querySelector("#recipeFooter");
+var recipeName = document.querySelector("#recipeName");
+var recipeType = document.querySelector("#recipeType");
+var addNewButton = document.querySelector("#addNewButton");
 
 
 letsCookButton.addEventListener("click",displayMeal);
 addARecipe.addEventListener("click", displayForm);
+addNewButton.addEventListener("click",addRecipe);
 
 function buttonClicked(){
 for(var i=0; i<radioButtons.length; i++)
@@ -57,9 +61,3 @@ function displayForm(){
 function getRandomIndex(array){
   return Math.floor(Math.random()*array.length);
 }
-
-
-//When you click the add a recipe button, the footer appears. It is hidden before
-//When the recipe Type = side, push the string into the sides array and then use the display
-//function to display the meal and removethe cooking pot image
-//Do this for side, main dish, and dessert
