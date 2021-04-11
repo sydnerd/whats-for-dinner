@@ -14,9 +14,9 @@ Once you click the button "Let's Cook" the image of the pot will go away and a r
 ![image](Docs/ButtonClicked.png)
 
 ## Technologies
--Javascript
--HTML
--CSS
+- Javascript
+- HTML
+- CSS
 
 ## Completed Extensions
 - Entire Meal Functionality
