@@ -4,20 +4,22 @@ var randomDishDisplay = document.querySelector("#dishDisplay");
 
 var image =document.querySelector("#cookpotImg");
 var rightText =document.querySelector("#rightText");
-
-
+var addARecipe =document.querySelector("#addRecipeButn");
+var footer =document.querySelector("#recipeFooter");
+var recipeName = document.querySelector("#recipeName");
+var recipeType = document.querySelector("#recipeType");
+var addNewButton = document.querySelector("#addNewButton");
 
 
 letsCookButton.addEventListener("click",displayMeal);
+addARecipe.addEventListener("click", displayForm);
+addNewButton.addEventListener("click",addRecipe);
 
-
-
-
-  function buttonClicked(){
-  for(var i=0; i<radioButtons.length; i++)
-    if(radioButtons[i].checked){
-      return radioButtons[i].id
-    }
+function buttonClicked(){
+for(var i=0; i<radioButtons.length; i++)
+  if(radioButtons[i].checked){
+    return radioButtons[i].id
+  }
 }
 
 function sideDisplay(){
@@ -52,10 +54,9 @@ function displayMeal(){
   randomDishDisplay.innerText = `${text}!`
 }
 
-
-var sideList = sides[getRandomIndex(sides)];
-var mainsList = mains[getRandomIndex(mains)];
-var dessertList = mains[getRandomIndex(desserts)];
+function displayForm(){
+  footer.classList.remove("hidden");
+}
 
 function getRandomIndex(array){
   return Math.floor(Math.random()*array.length);
